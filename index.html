@@ -1,87 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invățăm Împreună Totul de la 0 – Adela Eclat</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Curs Automachiaj/De Bază Online | Adela Eclat</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#fff1f2',100:'#ffe4e6',200:'#fecdd3',300:'#fda4af',400:'#fb7185',500:'#f43f5e',600:'#e11d48',700:'#be123c',800:'#9f1239',900:'#881337' },
+            accent: { 500:'#a78bfa',600:'#8b5cf6' }
+          },
+          boxShadow: { glow: '0 10px 30px rgba(244,63,94,.35)'},
+          fontFamily: {
+            elegant: ['"Licorice"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fffaf7;
-      color: #1a1a1a;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
+    .reveal{opacity:0;transform:translateY(14px);transition:all .6s ease}
+    .reveal.show{opacity:1;transform:none}
   </style>
 </head>
-<body class="bg-white text-gray-800">
-  <!-- Hero Section -->
-  <section class="bg-[url('hero-image.jpg')] bg-cover bg-center text-white py-32 px-6 text-center relative">
-    <div class="bg-black/50 absolute inset-0 z-0"></div>
-    <div class="relative z-10 max-w-3xl mx-auto">
-      <h1 class="text-5xl font-bold mb-6">ÎNVĂȚĂM ÎMPREUNĂ TOTUL DE LA 0</h1>
-      <p class="text-xl leading-relaxed max-w-2xl mx-auto">
-        Mă bucur că te afli aici. Alături de mine îți vei dezvolta abilitățile în makeup prin multitudinea de informații regăsite în cursurile mele.
+<body class="antialiased bg-white text-slate-800">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#despre" class="flex items-center gap-2 font-elegant text-5xl">
+          <span class="text-brand-500">Adela</span> Eclat
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#despre" class="hover:text-brand-700">Despre</a>
+          <a href="#galerie" class="hover:text-brand-700">Galerie</a>
+          <a href="#cursuri" class="hover:text-brand-700">Cursuri</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menuBtn" aria-label="Deschide meniul" class="p-2 rounded-lg border border-slate-300 hover:bg-slate-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 py-3 text-sm">
+        <a href="#despre" class="block py-2">Despre</a>
+        <a href="#galerie" class="block py-2">Galerie</a>
+        <a href="#cursuri" class="block py-2">Cursuri</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Despre / Hero -->
+  <section id="despre" class="relative overflow-hidden bg-gradient-to-br from-brand-100 via-accent-500/10 to-white">
+    <div class="absolute -top-40 -right-32 h-96 w-96 rounded-full bg-gradient-to-tr from-brand-300/40 to-accent-500/20 blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <p class="text-sm tracking-widest text-rose-600 font-semibold">CURS AUTOMACHIAJ / DE BAZĂ ONLINE</p>
+          <h1 class="mt-2 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">„ÎNVĂȚĂM ÎMPREUNĂ TOTUL DE LA 0”</h1>
+          <p class="mt-5 text-lg text-slate-700 max-w-xl">Mă bucur că te afli aici, alături de mine îți vei dezvolta abilitățile în makeup prin multitudinea de informații regăsite în cursurile mele. Sunt <strong>Adela Eclat</strong>, makeup artist și trainer. Activez în domeniu de aproximativ 4 ani, sunt extrem de pasionată de această zonă și vă susțin să vă urmați visul și să munciți pentru realizările voastre. Makeup‑ul pentru mine reprezintă artă, unde creativitatea nu are limite.</p>
+          <p class="mt-4 text-slate-700 max-w-2xl">Am realizat aceste cursuri online în urma cererii voastre și mi‑am dorit să împărtășesc cu voi toate informațiile acumulate în acești ani, pornind de la 0: ce kit de pensule avem nevoie? cum folosim și determinăm produsele potrivite nouă? care este tehnica potrivită atât nouă cât și persoanelor pe care vrem să o aplicăm? cum aleg fondul de ten? ce rutină de skincare am nevoie înainte de makeup? Multe alte întrebări la care încă nu ați găsit un răspuns potrivit — vin în ajutorul vostru cu aceste cursuri.</p>
+        </div>
+        <div class="relative reveal">
+          <div class="rounded-3xl bg-gradient-to-br from-brand-500 to-accent-500 p-1 shadow-xl" style="height:500px;">
+            <div class="h-full w-full rounded-[calc(theme(borderRadius.3xl)-4px)] bg-white overflow-hidden">
+              <img src="adela.jpeg" alt="Adela Eclat" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section id="galerie" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold tracking-tight">Galerie</h2>
+      <p class="mt-2 text-slate-600">Explorează portofoliul meu: look-uri, detalii și inspirație în culori și forme.</p>
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-3">
+        <img src="IMG_0014.jpg" alt="Adela Eclat" class="w-full h-full object-cover" />
+        <img src="IMG_0156.jpg" alt="Adela Eclat" class="w-full h-full object-cover" />
+        <img src="IMG_0157.jpg" alt="Adela Eclat" class="w-full h-full object-cover" />
+        <img src="IMG_1189.PNG" alt="Adela Eclat" class="w-full h-full object-cover" />
+        <img src="IMG_6959.jpg" alt="Adela Eclat" class="w-full h-full object-cover" />
+        <img src="IMG_9186.JPEG" alt="Adela Eclat" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+
+<section id="cursuri" class="py-20 bg-gradient-to-br from-brand-100 via-accent-500/10 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold tracking-tight">Cursuri</h2>
+    <p class="mt-2 text-slate-600">Alege din gama de cursuri pentru a-ți dezvolta abilitățile în machiaj, de la nivel de bază la tehnici avansate.</p>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-12">
+      <div class="bg-white p-6 rounded-2xl shadow-glow reveal">
+        <h3 class="text-xl font-bold mb-4">Automachiaj</h3>
+        <p class="mb-4">Înveți să te machiezi singură cu pași simpli și explicativi pentru orice eveniment din viața ta, dar tehnica pe care ți-o explic poate fi aplicată cu lejeritate și în machiajele tale de zi cu zi.</p>
+        <br>
+        <p class="font-bold mb-6">Învățăm împreună totul de la 0</p>
+        <a href="https://link-catre-videouri1" class="inline-block px-5 py-2 bg-brand-500 text-white font-semibold rounded-lg shadow hover:bg-brand-600">CUMPĂRĂ</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow-glow reveal">
+        <h3 class="text-xl font-bold mb-4">Machiaj de eveniment</h3>
+        <p class="mb-4">Ți-ai dorit dintotdeauna să îți machiezi prietenele sau ești la începutul carierei de makeup și încă acumulezi informații? Vin în ajutorul tău cu un machiaj de seară, de eveniment, unde o să îți arăt pas cu pas întreaga tehnică, iar rezultatele tale sunt garantate.</p>
+        <p class="font-bold mb-6">Învățăm împreună totul de la 0</p>
+        <a href="https://link-catre-videouri2" class="inline-block px-5 py-2 bg-brand-500 text-white font-semibold rounded-lg shadow hover:bg-brand-600">CUMPĂRĂ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="py-10 border-t border-slate-200 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+
+    <!-- Logo + subtitlu + drepturi -->
+    <div class="flex flex-col items-center md:items-start">
+      <a href="#despre" class="flex items-center gap-2 font-elegant text-4xl">
+        <span class="text-brand-500">Adela</span> Eclat
+      </a>
+      <p class="text-slate-600 mt-1 text-sm">Make-up Artist and Trainer</p>
+      <p class="text-sm text-slate-600 mt-2">
+        © <span id="year"></span> Adela Eclat
       </p>
     </div>
-  </section>
 
-  <!-- Despre mine -->
-  <section class="py-16 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-semibold mb-4">Despre Adela Eclat</h2>
-    <p class="text-lg leading-relaxed">
-      Sunt <strong>Adela Eclat</strong> – makeup artist și trainer cu o experiență de aproximativ 4 ani, extrem de pasionată de această zonă. Vă susțin să vă urmați visul și să munciți pentru realizările voastre. Makeup-ul pentru mine este artă unde creativitatea nu are limite.<br /><br />
-      Aceste cursuri online sunt rezultatul cererii voastre și dorinței mele de a vă transmite toate informațiile acumulate. De la alegerea pensulelor, produse potrivite, tehnici și rutine de skincare, găsești aici tot ce ai nevoie ca să pornești de la 0.
-    </p>
-  </section>
-
-  <!-- Galerie imagini -->
-  <section class="px-4 py-12 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-semibold text-center mb-10">Galerie</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="adela.jpeg" alt="Adela" class="rounded-2xl shadow-xl hover:scale-105 transition" />
-      <img src="imagine2.jpg" alt="Makeup" class="rounded-2xl shadow-xl hover:scale-105 transition" />
-      <img src="imagine3.jpg" alt="Produse" class="rounded-2xl shadow-xl hover:scale-105 transition" />
-      <img src="imagine4.jpg" alt="Studio" class="rounded-2xl shadow-xl hover:scale-105 transition" />
-      <img src="imagine5.jpg" alt="Cursuri" class="rounded-2xl shadow-xl hover:scale-105 transition" />
-      <img src="imagine6.jpg" alt="Lucru" class="rounded-2xl shadow-xl hover:scale-105 transition" />
-    </div>
-  </section>
-
-  <!-- Cursuri Section -->
-  <section class="bg-[#fef4ec] py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-10">Cursuri Online</h2>
-
-      <!-- Video 1 -->
-      <div class="mb-16">
-        <p class="text-lg mb-4">
-          ÎNVEȚI SĂ TE MACHEZI SINGURĂ CU PAȘI SIMPLI ȘI EXPLICATIVI PENTRU ORICE EVENIMENT DIN VIAȚA TA, DAR TEHNICA POATE FI APLICATĂ CU LEJERITATE ȘI ÎN MACHIAJELE ZILNICE.
-        </p>
-        <div class="aspect-w-16 aspect-h-9 mb-4">
-          <iframe src="https://www.youtube.com/embed/ID_VIDEO1" class="w-full h-full rounded-2xl shadow-lg" allowfullscreen></iframe>
-        </div>
-        <button class="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold uppercase tracking-wider shadow-lg hover:bg-pink-700 transition">Cumpără</button>
-      </div>
-
-      <!-- Video 2 -->
-      <div>
-        <p class="text-lg mb-4">
-          ȚI-AI DORIT DINTOTDEAUNA SĂ ÎȚI MACHEZI PRIETENELE SAU EȘTI LA ÎNCEPUTUL CARIEREI DE MAKEUP? VIN ÎN AJUTORUL TĂU CU UN MACHIAJ DE SEARĂ DE EVENIMENT UNDE ÎȚI ARĂT PAS CU PAS TEHNICA MEA.
-        </p>
-        <div class="aspect-w-16 aspect-h-9 mb-4">
-          <iframe src="https://www.youtube.com/embed/ID_VIDEO2" class="w-full h-full rounded-2xl shadow-lg" allowfullscreen></iframe>
-        </div>
-        <button class="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold uppercase tracking-wider shadow-lg hover:bg-pink-700 transition">Cumpără</button>
+    <!-- Social -->
+    <div class="flex flex-col items-center md:items-end">
+      <p class="text-slate-600 mb-2 text-sm">Urmărește-mă pe:</p>
+      <div class="flex items-center gap-4 text-slate-600">
+        <a href="https://www.instagram.com/eclat.d.adele/" aria-label="Instagram" class="hover:text-brand-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@eclat.d.adele" aria-label="TikTok" class="hover:text-brand-700">
+          <!-- SVG TikTok (monocrom) -->
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+               class="h-4 w-4" fill="currentColor" aria-hidden="true">
+            <title>TikTok</title>
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+          </svg>
+        </a>
       </div>
     </div>
-  </section>
 
-  <footer class="text-center py-10 text-sm text-gray-500 bg-white">
-    &copy; 2025 Adela Eclat. Toate drepturile rezervate.
-  </footer>
+  </div>
+</footer>
+
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');})},{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
+
